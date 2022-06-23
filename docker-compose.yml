@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  user_service:
+    build: ./userMicroservice
+    ports:
+      - "8091:8091"
+    depends_on:
+      - postgres_db
+    links:
+      - "postgres_db:postgres_db"
+  postgres_db:
+    image: postgres:14
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: currencyExchange
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
