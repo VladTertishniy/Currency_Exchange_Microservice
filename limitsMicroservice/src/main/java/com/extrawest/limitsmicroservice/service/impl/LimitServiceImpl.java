@@ -6,12 +6,15 @@ import com.extrawest.limitsmicroservice.mapper.LimitMapper;
 import com.extrawest.limitsmicroservice.model.Limit;
 import com.extrawest.limitsmicroservice.repository.LimitRepository;
 import com.extrawest.limitsmicroservice.service.LimitService;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@AllArgsConstructor
 public class LimitServiceImpl implements LimitService {
 
     private LimitRepository limitRepository;
