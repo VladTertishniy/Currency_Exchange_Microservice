@@ -6,9 +6,10 @@ import com.extrawest.limitsmicroservice.dto.response.LimitResponseDTO;
 import java.util.List;
 
 public interface LimitService {
-    LimitResponseDTO createLimit(LimitRequestDTO limitRequestDTO);
+    LimitResponseDTO getLimit();
+    /*LimitResponseDTO createLimit(LimitRequestDTO limitRequestDTO);
     void deleteLimit(Long id);
     LimitResponseDTO updateLimit(Long id, LimitRequestDTO limitRequestDTO);
     List<LimitResponseDTO> getAllLimits();
-    LimitResponseDTO getLimitById(Long id);
+    LimitResponseDTO getLimitById(Long id);*/
 }
