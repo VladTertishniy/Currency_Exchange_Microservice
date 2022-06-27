@@ -1,0 +1,13 @@
+server:
+  port: 8092
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    instance-id: limits-service-instance
+spring:
+  application:
+    name: limits-service
+  profiles:
+    active: application-dev.properties
