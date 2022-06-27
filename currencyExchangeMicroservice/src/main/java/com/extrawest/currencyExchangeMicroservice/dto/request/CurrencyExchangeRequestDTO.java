@@ -1,9 +1,9 @@
-package com.extrawest.currencyExchangeMicroservice.dto;
+package com.extrawest.currencyExchangeMicroservice.dto.request;
 
 import lombok.Data;
 
 @Data
-public class ExchangeRequestDTO {
+public class CurrencyExchangeRequestDTO {
     private String currencyFrom;
     private String currencyTo;
     private double sum;
