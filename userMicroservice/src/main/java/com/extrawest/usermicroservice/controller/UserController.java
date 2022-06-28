@@ -4,6 +4,7 @@ import com.extrawest.usermicroservice.dto.request.UserRequestDTO;
 import com.extrawest.usermicroservice.dto.response.UserResponseDTO;
 import com.extrawest.usermicroservice.service.UserService;
 import lombok.AllArgsConstructor;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +18,7 @@ import java.util.List;
 public class UserController {
 
     private final UserService userService;
+    private final Environment environment;
 
     @PostMapping("/createUser")
     public ResponseEntity<UserResponseDTO> createUser(@RequestBody @Valid UserRequestDTO userRequestDTO) {
@@ -41,5 +43,10 @@ public class UserController {
     @GetMapping("/getAllUsers")
     public ResponseEntity<List<UserResponseDTO>> getAllUsers () {
         return ResponseEntity.status(HttpStatus.OK).body(userService.getAllUsers());
+    }
+
+    @GetMapping("/getPort")
+    public ResponseEntity<String> getPortNumber() {
+        return ResponseEntity.status(HttpStatus.OK).body(environment.getProperty("local.server.port"));
     }
 }
