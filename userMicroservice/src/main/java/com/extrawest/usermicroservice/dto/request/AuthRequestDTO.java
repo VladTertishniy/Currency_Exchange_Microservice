@@ -7,7 +7,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Data
-public class AuthenticationRequestDTO {
+public class AuthRequestDTO {
     @Email
     private String email;
     @NotNull(message = "Password is required!")

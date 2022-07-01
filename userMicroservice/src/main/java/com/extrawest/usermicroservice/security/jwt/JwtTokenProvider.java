@@ -1,9 +1,8 @@
 package com.extrawest.usermicroservice.security.jwt;
 
-import com.extrawest.usermicroservice.exception.JwtAuthenticationException;
+import com.extrawest.usermicroservice.exception.JwtAuthException;
 import io.jsonwebtoken.*;
 import lombok.RequiredArgsConstructor;
-import org.bouncycastle.jcajce.BCFKSLoadStoreParameter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -46,7 +45,7 @@ public class JwtTokenProvider {
             Jws<Claims> claimsJws = Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token);
             return !claimsJws.getBody().getExpiration().before(new Date());
         } catch (JwtException | IllegalArgumentException e) {
-            throw new JwtAuthenticationException("Invalid token!", HttpStatus.UNAUTHORIZED);
+            throw new JwtAuthException("Invalid token!", HttpStatus.UNAUTHORIZED);
         }
     }
 

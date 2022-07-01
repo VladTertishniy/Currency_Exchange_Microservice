@@ -1,6 +1,6 @@
 package com.extrawest.usermicroservice.security.jwt;
 
-import com.extrawest.usermicroservice.exception.JwtAuthenticationException;
+import com.extrawest.usermicroservice.exception.JwtAuthException;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -31,10 +31,10 @@ public class JwtTokenFilter extends GenericFilterBean {
                     SecurityContextHolder.getContext().setAuthentication(authentication);
                 }
             }
-        } catch (JwtAuthenticationException e) {
+        } catch (JwtAuthException e) {
             SecurityContextHolder.clearContext();
             ((HttpServletResponse) response).sendError(e.getHttpStatus().value());
-            throw new JwtAuthenticationException("Invalid token!");
+            throw new JwtAuthException("Invalid token!");
         }
         filterChain.doFilter(request, response);
     }

@@ -1,6 +1,6 @@
 package com.extrawest.usermicroservice.controller;
 
-import com.extrawest.usermicroservice.dto.request.AuthenticationRequestDTO;
+import com.extrawest.usermicroservice.dto.request.AuthRequestDTO;
 import com.extrawest.usermicroservice.dto.request.UserRequestDTO;
 import com.extrawest.usermicroservice.dto.response.UserResponseDTO;
 import com.extrawest.usermicroservice.service.AuthenticationService;
@@ -30,10 +30,10 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<Map<String, String>> login(@RequestBody @Valid AuthenticationRequestDTO authenticationRequestDTO) {
-        String token = authenticationService.login(authenticationRequestDTO.getEmail(), authenticationRequestDTO.getPassword());
+    public ResponseEntity<Map<String, String>> login(@RequestBody @Valid AuthRequestDTO authRequestDTO) {
+        String token = authenticationService.login(authRequestDTO.getEmail(), authRequestDTO.getPassword());
         Map<String, String> tokens = new HashMap<>();
-        tokens.put("email", authenticationRequestDTO.getEmail());
+        tokens.put("email", authRequestDTO.getEmail());
         tokens.put("token", token);
         return ResponseEntity.ok(tokens);
     }

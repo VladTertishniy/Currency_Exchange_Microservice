@@ -5,14 +5,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.security.core.AuthenticationException;
 
 @Getter
-public class JwtAuthenticationException extends AuthenticationException {
+public class JwtAuthException extends AuthenticationException {
     private HttpStatus httpStatus;
 
-    public JwtAuthenticationException(String msg) {
+    public JwtAuthException(String msg) {
         super(msg);
     }
 
-    public JwtAuthenticationException(String msg, HttpStatus httpStatus) {
+    public JwtAuthException(String msg, HttpStatus httpStatus) {
         super(msg);
         this.httpStatus = httpStatus;
     }
