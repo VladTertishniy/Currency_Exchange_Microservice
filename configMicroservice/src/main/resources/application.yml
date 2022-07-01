@@ -1,0 +1,36 @@
+server:
+  port: 8096
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    instance-id: config-service-instance
+
+spring:
+  application:
+    name: config-service
+  cloud:
+    bus:
+      enabled: true
+      refresh:
+        enabled: true
+    config:
+      server:
+        git:
+          uri: https://github.com/VladTertishniy/extrawest_config_service_values
+          clone-on-start: true
+          username: vkad.tert@gmail.com
+          password: 345444mk1997
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
