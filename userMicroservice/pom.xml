@@ -19,8 +19,18 @@
 		<lombok.mapstruct.version>0.2.0</lombok.mapstruct.version>
 		<jaxb-api.version>2.4.0-b180830.0359</jaxb-api.version>
 		<maven.plugin.version>3.8.0</maven.plugin.version>
+		<jjwt.version>0.9.1</jjwt.version>
 	</properties>
 	<dependencies>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>${jjwt.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>

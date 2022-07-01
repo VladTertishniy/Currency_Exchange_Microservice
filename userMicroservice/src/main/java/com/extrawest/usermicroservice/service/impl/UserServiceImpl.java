@@ -2,6 +2,7 @@ package com.extrawest.usermicroservice.service.impl;
 
 import com.extrawest.usermicroservice.dto.request.UserRequestDTO;
 import com.extrawest.usermicroservice.dto.response.UserResponseDTO;
+import com.extrawest.usermicroservice.exception.ApiRequestException;
 import com.extrawest.usermicroservice.mapper.UserMapper;
 import com.extrawest.usermicroservice.model.User;
 import com.extrawest.usermicroservice.repository.UserRepository;
@@ -51,5 +52,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserResponseDTO getUserById(Long id) {
         return userMapper.toUserResponseDTO(userRepository.findById(id).orElseThrow());
+    }
+
+    @Override
+    public User getExistUser(String email) {
+        return userRepository.findByEmail(email).orElseThrow(() ->
+                new ApiRequestException("User not found!"));
     }
 }
