@@ -1,5 +1,6 @@
-package com.extrawest.currencyExchangeMicroservice.dto.request;
+package com.extrawest.currencyExchangeMicroservice.model.dto.request;
 
+import com.extrawest.currencyExchangeMicroservice.model.Currencies;
 import lombok.Data;
 
 @Data

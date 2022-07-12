@@ -2,7 +2,7 @@ package com.extrawest.currencyExchangeMicroservice.service.impl;
 
 import com.extrawest.currencyExchangeMicroservice.feignClient.LimitsFeignClient;
 import com.extrawest.currencyExchangeMicroservice.exception.ExchangingException;
-import com.extrawest.currencyExchangeMicroservice.mapper.LimitMapper;
+import com.extrawest.currencyExchangeMicroservice.model.mapper.LimitMapper;
 import com.extrawest.currencyExchangeMicroservice.model.ExchangeRateEntity;
 import com.extrawest.currencyExchangeMicroservice.model.ExchangeRateEntityId;
 import com.extrawest.currencyExchangeMicroservice.model.Limit;

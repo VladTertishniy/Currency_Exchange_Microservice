@@ -1,6 +1,6 @@
 package com.extrawest.currencyExchangeMicroservice.controller;
 
-import com.extrawest.currencyExchangeMicroservice.dto.request.CurrencyExchangeRequestDTO;
+import com.extrawest.currencyExchangeMicroservice.model.dto.request.CurrencyExchangeRequestDTO;
 import com.extrawest.currencyExchangeMicroservice.service.CurrencyExchangeService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
