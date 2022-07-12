@@ -3,3 +3,5 @@ spring:
     config:
       uri: http://localhost:8096
       name: config-service
+  profiles:
+    active: prod

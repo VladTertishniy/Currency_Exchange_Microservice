@@ -1,19 +1,7 @@
-#server:
-#  port: 8097
-#eureka:
-#  client:
-#    serviceUrl:
-#      defaultZone: http://localhost:8761/eureka/
-#  instance:
-#    instance-id: limits-service-instance
 spring:
-  cloud:
-    config:
-#      discovery:
-#        enabled: true
-#      name: config-service
-      enabled: false
-#  application:
-#    name: limits-service
-  profiles:
-    active: dev
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+#потом не нужно будет

@@ -36,22 +36,22 @@
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
     </dependencies>
-    <profiles>
-        <profile>
-            <id>dev</id>
-            <properties>
-                <envName>dev</envName>
-                <skipTests>true</skipTests>
-                <jdbc.url>src/main/resources/application-dev.properties</jdbc.url>
-            </properties>
-        </profile>
-        <profile>
-            <id>prod</id>
-            <properties>
-                <envName>prod</envName>
-                <skipTests>true</skipTests>
-                <jdbc.url>src/main/resources/application-prod.properties</jdbc.url>
-            </properties>
-        </profile>
-    </profiles>
+<!--    <profiles>-->
+<!--        <profile>-->
+<!--            <id>dev</id>-->
+<!--            <properties>-->
+<!--                <envName>dev</envName>-->
+<!--                <skipTests>true</skipTests>-->
+<!--                <jdbc.url>src/main/resources/application-dev.properties</jdbc.url>-->
+<!--            </properties>-->
+<!--        </profile>-->
+<!--        <profile>-->
+<!--            <id>prod</id>-->
+<!--            <properties>-->
+<!--                <envName>prod</envName>-->
+<!--                <skipTests>true</skipTests>-->
+<!--                <jdbc.url>src/main/resources/application-prod.properties</jdbc.url>-->
+<!--            </properties>-->
+<!--        </profile>-->
+<!--    </profiles>-->
 </project>
