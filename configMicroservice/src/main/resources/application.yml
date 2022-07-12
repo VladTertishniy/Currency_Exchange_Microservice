@@ -4,7 +4,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://user:password@localhost:8761/eureka/
   instance:
     instance-id: config-service-instance
 
@@ -19,10 +19,9 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/VladTertishniy/extrawest_config_service_values
+          uri: https://github.com/VladTertishniy/configValue
           clone-on-start: true
-          username: vkad.tert@gmail.com
-          password: 345444mk1997
+          default-label: main
   rabbitmq:
     host: localhost
     port: 5672
