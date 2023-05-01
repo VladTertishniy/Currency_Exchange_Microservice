@@ -209,7 +209,6 @@
 			<id>sonatype-nexus-releases</id>
 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 		</repository>
-
 		<!-- GitHub Releases -->
 		<snapshotRepository>
 			<id>github-releases</id>
