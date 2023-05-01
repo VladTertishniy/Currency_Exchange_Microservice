@@ -111,8 +111,8 @@
 					<jreleaser>
 						<project>
 							<description>OCPP operation tester for the Charge Points</description>
-							<website>https://github.com/extrawest/BDD-Charge-Point-Tester-via-OCPP-J-/tree/main</website>
-							<docsUrl>https://github.com/extrawest/BDD-Charge-Point-Tester-via-OCPP-J-/tree/main</docsUrl>
+							<website>https://github.com/VladTertishniy/Currency_Exchange_Microservice/tree/main</website>
+							<docsUrl>https://github.com/VladTertishniy/Currency_Exchange_Microservice/tree/main</docsUrl>
 							<license>APACHE-2.0</license>
 							<copyright>2023 Extrawest</copyright>
 						</project>
@@ -187,7 +187,7 @@
 		<!-- GitHub Releases -->
 		<snapshotRepository>
 			<id>github-releases</id>
-			<url>https://maven.pkg.github.com/extrawest/BDD-Charge-Point-Tester-via-OCPP-J-</url>
+			<url>https://maven.pkg.github.com/VladTertishniy/Currency_Exchange_Microservice</url>
 			<name>GitHub Package Registry</name>
 			<uniqueVersion>false</uniqueVersion>
 		</snapshotRepository>
