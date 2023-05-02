@@ -30,6 +30,30 @@
 	<artifactId>extrawest.currencyExchange</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>currencyExchangeMicroserviceApplication</name>
+	<licenses>
+		<license>
+			<name>The Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<id>vladyslav.tertyshnyi</id>
+			<name>Vladyslav Tertyshnyi</name>
+			<email>vladyslav.tertyshnyi@extrawest.com</email>
+			<timezone>+2</timezone>
+		</developer>
+	</developers>
+	<organization>
+		<name>Extrawest</name>
+		<url>https://www.extrawest.com/</url>
+	</organization>
+	<scm>
+		<connection>scm:git:git@github.com/VladTertishniy/Currency_Exchange_Microservice.git</connection>
+		<developerConnection>scm:git:ssh://github.com/VladTertishniy/Currency_Exchange_Microservice.git</developerConnection>
+		<url>https://github.com/VladTertishniy/Currency_Exchange_Microservice/tree/main</url>
+	</scm>
+	<url>https://github.com/VladTertishniy/Currency_Exchange_Microservice</url>
 	<description>extrawest training project</description>
 	<dependencies>
 		<dependency>
